@@ -1,0 +1,47 @@
+.container__account {
+    width: 410px;
+    margin:40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container__account h3 {
+    font-size: 23px;
+    padding-bottom: 30px;
+}
+
+.container__account-input {
+    width: 360px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.hightline {
+    width: 100%;
+    border-top: 1px solid #ccc;
+}
+
+.container__account-input input {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.container__account button {
+    width: 360px;
+    height: 40px;
+    margin-top: 15px;
+    color: #fff;
+    background-color: #000;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.container__account a {
+    font-size: 16px;
+    margin-top: 15px;
+    text-decoration: none;
+    color: #000;
+}

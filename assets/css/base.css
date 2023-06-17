@@ -1,0 +1,358 @@
+:root {
+    --while-color:#fff;
+    --black-color:#000;
+}
+
+* {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+html {
+    font-size: 62.5%; /*10px*/
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    line-height: 1.6rem;
+}
+
+.grid {
+    width: 1200px;
+    max-width: 100%;
+    margin: auto;
+}
+
+.grid__full-width {
+    width: 100%;
+}
+
+.grid__row {
+    display: flex;
+    flex-wrap: wrap; /*Nếu độ dài khối con vượt quá khối cha thì nhảy xuống hàng dưới*/
+}
+
+.row {
+    margin-left: 15px;
+}
+
+.row__top-bot {
+    margin: 30px auto;
+}
+
+/* chữ màu đen */
+.blackcolor {
+    color: var(--black-color);
+}
+
+/* chữ màu trắng */
+.whilecolor {
+    color: var(--while-color);
+}
+
+.margin5px {
+    margin: 5px;
+}
+/* Hiệu ứng  */
+@keyframes effect_left {
+    from {
+        transform: translate(-100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+
+@keyframes effect_right {
+    from {
+        transform: translate(100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+
+@keyframes effect_up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translate(0%);
+    }
+}
+
+.font-size {
+    font-size: 14px;
+}
+
+.display-none {
+    display: none;
+}
+
+/* --------------------------------------------- Giỏ Hàng -------------------------------------------------*/
+/* Giỏ hàng trống */
+.empty_card {
+    width: 280px;
+    position: absolute;
+    height: 100px;
+    background-color: var(--while-color);
+    right: 40px;
+    top: 30px;
+    box-shadow: 1px 1px 1px 1px black;
+    display: none;
+}
+
+.empty_card-fontsize {
+    font-size: 16px;
+}
+
+.empty_card-fontsize.whilecolor {
+    background-color: var(--black-color);
+    margin: 10px 5px;
+    padding: 5px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+}
+
+.empty_card-fontsize.blackcolor {
+    margin: 0 5px;
+}
+
+.close-card {
+    opacity: 1;
+}
+.close-card:hover {
+    cursor: pointer;
+    opacity: 2;
+    color: #c01717;
+}
+
+.header__list-card:hover {
+    cursor: pointer;
+}
+/* Giỏ hàng không trống */
+.no_empty_card {
+    min-height: 200px;
+    background-color: var(--while-color);
+    width: 280px;
+    position: absolute;
+    right: 40px;
+    top: 30px;
+    box-shadow: 1px 1px 1px 1px black;
+    display: none;
+}
+
+.no_empty_card-myproduct {
+    overflow: scroll;
+    height: 180px;
+}
+
+.no_empty_card-myproductnumber {
+    background-color: var(--black-color);
+    color: var(--while-color);
+    padding: 5px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.no_empty_card-myproduct-imgcard {
+    width: 30%;
+}
+
+.no_empty_card-myproduct-imgcard img {
+    width: 100%;
+}
+
+.no_empty_card-myproduct {
+    color: var(--black-color);
+    margin-top: 10px;
+}
+
+.no_empty_card-myproduct-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+/* ------------------------------------ Modal Giỏ hàng ------------------------------- */
+.modal__card {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.modal__card-contents {
+    width: 850px;
+    background-color: var(--while-color);
+    min-height: 0;
+}
+
+.modal__card-contents-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.modal__card-contents-header--inf {
+    margin-top: 20px;
+}
+
+.modal__card-contents-header,.modal__card-contents-information,.modal__card-contents-button {
+    margin-left: 10px;
+}
+
+.modal__card-contents-header--btnclose {
+    background-color: var(--black-color);
+    width: 25px;
+    height: 25px;
+    color: var(--while-color);
+    font-size: 19px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.modal__card-contents-header--btnclose:hover {
+    cursor: pointer;
+}
+
+.modal__card--line {
+    border-top: 1px solid #e6e6e6;
+    width: 100%;
+}
+
+.modal__card-contents-menu {
+    display: flex;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+.modal__card-contents-menu {
+    width: 100%;
+    text-align: center;
+}
+
+.modal__card-contents-menu--product {
+    width: 30%;
+}
+
+.modal__card-contents-menu--money {
+    width: 15%;
+}
+
+.modal__card-contents-menu--quantity {
+    width: 20%;
+}
+
+.modal__card-contents-menu--bill {
+    width: 35%;
+}
+
+.modal__card-contents-menu--product-detail {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.modal__card-contents-menu--product-detail-img,.modal__card-contents-menu--product-detail-text {
+    width: 45%;
+}
+
+.modal__card-contents-menu--product-detail-img img {
+    width: 100%;
+}
+
+.modal__card-contents-menu--product-detail-text {
+    display: flex;
+    align-items:center;
+}
+
+.modal__card-contents-menu--money-real {
+    font-size: 14px;
+    color: red;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.modal__card-contents-menu--money-percent {
+    color: var(--while-color);
+    background-color: red;
+    font-size: 14px;
+    font-weight: 600;
+    width: 50px;
+    height: 20px;
+    text-align: center;
+    padding-top:2px;
+    margin-left: 37px;
+    margin-top: 25px;
+}
+
+.modal__card-contents-menu--quantity-real {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.modal__card-contents-menu--bill-real {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 16px;
+}
+
+.modal__card-contents-menu--bill-real-money {
+    color: red;
+    font-weight: 700;
+}
+
+.modal__card-contents-menu--bill-real-trash {
+    cursor: pointer;
+}
+
+.modal__card-contents-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 20px;
+    margin-top: 40px;
+}
+
+.modal__card-contents-button-money {
+    font-size: 16px;
+    color: red;
+    font-weight: 600;
+}
+
+.modal__card-contents-button-bill {
+    width: 182px;
+    color: var(--while-color);
+    font-size: 14px;
+    background-color: var(--black-color);
+    height: 30px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.modal__card-many-contents-information {
+    overflow: scroll;
+    height: 250px;
+}
